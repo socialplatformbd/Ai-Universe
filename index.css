@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root,
+html.dark {
+  --bg: #080612;
+  --surface: #120c22;
+  --card: #1a1430;
+  --nav: #100a1c;
+  --chip: #261e42;
+  --border: rgba(167, 139, 250, 0.14);
+  --text: #f5f3ff;
+  --muted: #b6aed4;
+  --faint: #7c7399;
+  --accent: #c4b5fd;
+}
+
+html.light {
+  --bg: #f4f0ff;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --nav: #ffffff;
+  --chip: #ece6ff;
+  --border: rgba(91, 33, 182, 0.12);
+  --text: #1e1238;
+  --muted: #5b5278;
+  --faint: #8b82a8;
+  --accent: #6d28d9;
+}
+
+html,
+body,
+#root {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+html.light .aurora {
+  opacity: 0.28;
+}
+
+.aurora-a {
+  width: 280px;
+  height: 280px;
+  background: #6d28d9;
+  top: -80px;
+  right: -60px;
+  animation: drift 18s ease-in-out infinite;
+}
+
+.aurora-b {
+  width: 240px;
+  height: 240px;
+  background: #2563eb;
+  bottom: 80px;
+  left: -80px;
+  animation: drift 22s ease-in-out infinite reverse;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.6) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 24px);
+  }
+}
+
+::selection {
+  background: #7c3aed;
+  color: white;
+}
