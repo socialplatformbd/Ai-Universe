@@ -19,6 +19,7 @@ import {
   IconWifiOff,
   IconX,
   IconCheck,
+  IconTelegram,
 } from "./Icons";
 import { cn } from "./cn";
 const appIcon = `${import.meta.env.BASE_URL}icon-192.png`;
@@ -188,7 +189,7 @@ export default function App() {
       </div>
 
       {!hideNav && (
-        <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col">
+        <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col md:max-w-3xl lg:max-w-5xl">
           {!online && <OfflineBanner language={language} />}
 
           {screen === "home" && (
@@ -416,7 +417,7 @@ function HomeScreen({
             }}
           />
         ) : (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
             {filtered.map((tool) => (
               <ToolCard
                 key={tool.id}
@@ -545,7 +546,7 @@ function FavoritesScreen({
           icon="heart"
         />
       ) : (
-        <div className="mt-5 grid grid-cols-2 gap-3">
+        <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {tools.map((tool) => (
             <ToolCard
               key={tool.id}
@@ -638,6 +639,35 @@ function SettingsScreen({
           label={t(language, "privacy")}
           onClick={onPrivacy}
         />
+      </div>
+
+      <SectionLabel>{language === "bn" ? "ডেভেলপার" : "Developer"}</SectionLabel>
+      <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--card)] p-5">
+        <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-violet-600/30 blur-3xl" />
+        <div className="relative flex items-center gap-4">
+          <img src={appIcon} alt="" className="h-14 w-14 rounded-2xl shadow-lg" />
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--faint)]">
+              Made by
+            </p>
+            <p className="truncate text-lg font-extrabold text-[var(--text)]">Mohammad Rakib</p>
+          </div>
+        </div>
+        <p className="relative mt-4 text-sm leading-relaxed text-[var(--muted)]">
+          {language === "bn"
+            ? "নতুন আপডেট ও নতুন নতুন টুলস পেতে Telegram channel এ জয়েন হোন"
+            : "Join the Telegram channel for new updates and new tools"}
+        </p>
+        <a
+          href="https://t.me/appdevbyrakib"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-3.5 text-[15px] font-bold text-white shadow-lg active:scale-[0.98]"
+        >
+          <IconTelegram size={20} />
+          {language === "bn" ? "Telegram channel এ জয়েন করুন" : "Join Telegram Channel"}
+        </a>
+        <p className="relative mt-2 text-center text-xs text-[var(--faint)]">t.me/appdevbyrakib</p>
       </div>
 
       <p className="mt-8 text-center text-xs leading-relaxed text-[var(--faint)]">
@@ -759,7 +789,7 @@ function BottomNav({
 
   return (
     <nav
-      className="fixed bottom-0 left-1/2 z-40 w-full max-w-lg -translate-x-1/2 border-t border-[var(--border)] bg-[var(--nav)]/90 pb-[max(8px,env(safe-area-inset-bottom))] pt-1 backdrop-blur-xl"
+      className="fixed bottom-0 left-1/2 z-40 w-full max-w-lg -translate-x-1/2 md:max-w-3xl lg:max-w-5xl border-t border-[var(--border)] bg-[var(--nav)]/90 pb-[max(8px,env(safe-area-inset-bottom))] pt-1 backdrop-blur-xl"
       aria-label="Main"
     >
       <div className="grid grid-cols-3">
@@ -838,7 +868,7 @@ function InstallBanner({
   canPrompt: boolean;
 }) {
   return (
-    <div className="fixed bottom-[88px] left-1/2 z-40 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-2xl border border-violet-400/30 bg-[var(--surface)] p-4 shadow-2xl">
+    <div className="fixed bottom-[88px] left-1/2 z-40 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 md:max-w-xl rounded-2xl border border-violet-400/30 bg-[var(--surface)] p-4 shadow-2xl">
       <div className="flex items-start gap-3">
         <img src={appIcon} alt="" className="h-11 w-11 rounded-xl" />
         <div className="min-w-0 flex-1">

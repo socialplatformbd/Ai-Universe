@@ -252,3 +252,11 @@ export function SymbolMark({ type, size = 18 }: { type: string; size?: number })
       return <IconChat {...props} />;
   }
 }
+
+export function IconTelegram(p: IconProps) {
+  return (
+    <svg {...base(p)} fill="currentColor">
+      <path d="M21.9 4.3a1.3 1.3 0 0 0-1.35-.2L2.8 11a1.1 1.1 0 0 0 .05 2.06l4.5 1.4 1.75 5.4a1 1 0 0 0 1.7.4l2.5-2.45 4.5 3.3a1.3 1.3 0 0 0 2.05-.8l2.7-15.1a1.3 1.3 0 0 0-.6-1.4zM9.4 14.6l8.2-5.1-6.3 6.1-.3 2.8-1.6-3.8z" />
+    </svg>
+  );
+}
