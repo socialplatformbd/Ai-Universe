@@ -1,5 +1,5 @@
 const CACHE = "ai-universe-v2";
-const SHELL = ["./", "./manifest.json", "./icons/icon-192.png", "./icons/icon-512.png"];
+const SHELL = ["./", "./manifest.json", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)));

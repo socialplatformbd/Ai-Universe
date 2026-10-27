@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { AITool, CategoryId, Language, Screen, Theme } from "./types";
-import { CATEGORIES, TOOLS, filterTools } from "./data/tools";
-import { t, categoryLabel } from "./i18n/translations";
-import { ToolLogo } from "./components/ToolLogo";
-import { WebBrowser } from "./components/WebBrowser";
+import { CATEGORIES, TOOLS, filterTools } from "./tools";
+import { t, categoryLabel } from "./translations";
+import { ToolLogo } from "./ToolLogo";
+import { WebBrowser } from "./WebBrowser";
 import {
   IconDownload,
   IconHeart,
@@ -19,9 +19,9 @@ import {
   IconWifiOff,
   IconX,
   IconCheck,
-} from "./components/Icons";
-import { cn } from "./utils/cn";
-import appIcon from "./assets/icon-192.png";
+} from "./Icons";
+import { cn } from "./cn";
+const appIcon = `${import.meta.env.BASE_URL}icon-192.png`;
 
 const FAV_KEY = "aiuniverse.favorites";
 const LANG_KEY = "aiuniverse.language";

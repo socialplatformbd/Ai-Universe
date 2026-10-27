@@ -1,0 +1,228 @@
+import type { CategoryId, Language } from "./types";
+
+export const translations = {
+  en: {
+    appName: "AI Universe",
+    tagline: "Discover 30 essential AI tools",
+    searchPlaceholder: "Search AI tools...",
+    searchClear: "Clear search",
+    all: "All",
+    chat: "Chat AI",
+    research: "Research",
+    image: "Image",
+    design: "Design",
+    video: "Video",
+    writing: "Writing",
+    translation: "Translation",
+    coding: "Coding",
+    audio: "Audio",
+    popular: "Popular",
+    allTools: "All tools",
+    favorites: "Favorites",
+    noFavorites: "No favorites yet",
+    noFavoritesHint: "Tap the heart on any tool to save it here for quick access.",
+    noResults: "No tools found",
+    noResultsHint: "Try a different name, category, or clear your search.",
+    home: "Home",
+    settings: "Settings",
+    about: "About",
+    privacy: "Privacy",
+    language: "Language",
+    english: "English",
+    bengali: "বাংলা",
+    theme: "Appearance",
+    dark: "Dark",
+    light: "Light",
+    openOfficial: "Open official website",
+    openInBrowser: "Open in browser",
+    tryInApp: "Try in-app browser",
+    inAppNote:
+      "Some AI websites block in-app browsers. If the page stays blank, open it in your browser.",
+    webviewBlocked: "This site cannot run inside the app",
+    webviewBlockedHint:
+      "The provider blocks embedded browsers. Open the official website in Chrome or your default browser to continue.",
+    loading: "Loading…",
+    retry: "Retry",
+    offline: "You are offline",
+    offlineHint: "The directory still works. Opening an AI website needs internet.",
+    offlineServices: "AI websites need an internet connection.",
+    back: "Back",
+    refresh: "Refresh",
+    close: "Close",
+    share: "Share",
+    addFavorite: "Add to favorites",
+    removeFavorite: "Remove from favorites",
+    installTitle: "Install AI Universe",
+    installHint: "Add this app to your home screen for a full-screen experience.",
+    install: "Install",
+    dismiss: "Not now",
+    aboutTitle: "About AI Universe",
+    aboutDesc:
+      "AI Universe is an independent directory and launcher for popular AI websites. Tap a card to open the official site. It does not merge models into one chatbot, and it does not bypass logins or paid plans.",
+    version: "Version",
+    versionNumber: "1.0.0",
+    disclaimer: "Independent directory",
+    disclaimerText:
+      "AI Universe is a third-party directory. It is not affiliated with, endorsed by, or sponsored by any listed AI provider. Each provider keeps full control of its website, accounts, features, pricing, and terms.",
+    categories: "Supported categories",
+    privacyTitle: "Privacy notice",
+    privacyP1:
+      "AI Universe opens official third-party AI websites. When you use those sites, the provider may receive anything you type, upload, or submit there — including prompts, files, and account details.",
+    privacyP2:
+      "This app does not collect, store, or transmit your AI passwords, conversation history, or authentication tokens. It does not inject scripts into third-party pages and does not include analytics or advertising SDKs.",
+    privacyP3:
+      "Favorites, language, and theme are stored only on this device. Review each AI provider’s own privacy policy before using their service.",
+    privacyP4:
+      "Do not assume that information submitted on a third-party website stays private. Those services have their own policies and accounts.",
+    madeIndependent: "Independent · No ads · No account required",
+    requiresInternet: "Internet required for AI websites",
+    savedLocally: "Preferences saved on this device",
+    toolsCount: "{n} tools",
+    featured: "Featured",
+    continueTo: "Continue to {name}",
+    ownedByProvider:
+      "Logins, subscriptions, and features are handled on the official website.",
+    errorLoad: "Could not load this page",
+    errorLoadHint: "Check your connection, then retry or open the site in your browser.",
+    appearance: "Appearance",
+    preferences: "Preferences",
+    legal: "Legal",
+    howToInstall: "Install on Android",
+    howToInstallSteps:
+      "In Chrome, tap the menu (⋮) then Install app or Add to Home screen. AI Universe will appear like a normal app.",
+    notEndorsed: "Not affiliated with listed providers",
+    openHttpsOnly: "Only official HTTPS links are opened.",
+    favoriteSaved: "Saved to favorites",
+    emptySearchAction: "Clear search",
+    popularHint: "Most used assistants",
+    resultsFor: "Results",
+    toolCountLabel: "30 AI tools",
+    launchTitle: "Open {name}",
+    officialSite: "Official website",
+    categoryLabel: "Category",
+    keepWaiting: "Keep waiting",
+    defaultBrowser: "Default browser",
+  },
+  bn: {
+    appName: "এআই ইউনিভার্স",
+    tagline: "৩০টি প্রয়োজনীয় এআই টুল আবিষ্কার করুন",
+    searchPlaceholder: "এআই টুল খুঁজুন...",
+    searchClear: "অনুসন্ধান মুছুন",
+    all: "সব",
+    chat: "চ্যাট এআই",
+    research: "গবেষণা",
+    image: "ছবি",
+    design: "ডিজাইন",
+    video: "ভিডিও",
+    writing: "লেখা",
+    translation: "অনুবাদ",
+    coding: "কোডিং",
+    audio: "অডিও",
+    popular: "জনপ্রিয়",
+    allTools: "সব টুল",
+    favorites: "পছন্দসমূহ",
+    noFavorites: "এখনো কোনো পছন্দ নেই",
+    noFavoritesHint: "দ্রুত অ্যাক্সেসের জন্য যেকোনো টুলের হার্টে ট্যাপ করুন।",
+    noResults: "কোনো টুল পাওয়া যায়নি",
+    noResultsHint: "অন্য নাম বা বিভাগ চেষ্টা করুন, অথবা অনুসন্ধান মুছুন।",
+    home: "হোম",
+    settings: "সেটিংস",
+    about: "সম্পর্কে",
+    privacy: "গোপনীয়তা",
+    language: "ভাষা",
+    english: "English",
+    bengali: "বাংলা",
+    theme: "চেহারা",
+    dark: "ডার্ক",
+    light: "লাইট",
+    openOfficial: "অফিসিয়াল ওয়েবসাইট খুলুন",
+    openInBrowser: "ব্রাউজারে খুলুন",
+    tryInApp: "অ্যাপের ভিতরে চেষ্টা করুন",
+    inAppNote:
+      "কিছু এআই ওয়েবসাইট অ্যাপের ভিতরের ব্রাউজার আটকে দেয়। পাতা খালি থাকলে আপনার ব্রাউজারে খুলুন।",
+    webviewBlocked: "এই সাইট অ্যাপের ভিতরে চলে না",
+    webviewBlockedHint:
+      "প্রদানকারী এমবেডেড ব্রাউজার নিষিদ্ধ করেছে। চালিয়ে যেতে অফিসিয়াল ওয়েবসাইট ক্রোম বা ডিফল্ট ব্রাউজারে খুলুন।",
+    loading: "লোড হচ্ছে…",
+    retry: "আবার চেষ্টা করুন",
+    offline: "আপনি অফলাইনে আছেন",
+    offlineHint: "ডিরেক্টরি কাজ করবে। এআই ওয়েবসাইট খুলতে ইন্টারনেট লাগবে।",
+    offlineServices: "এআই ওয়েবসাইটগুলোর জন্য ইন্টারনেট প্রয়োজন।",
+    back: "ফিরে যান",
+    refresh: "রিফ্রেশ",
+    close: "বন্ধ করুন",
+    share: "শেয়ার",
+    addFavorite: "পছন্দে যোগ করুন",
+    removeFavorite: "পছন্দ থেকে সরান",
+    installTitle: "এআই ইউনিভার্স ইনস্টল করুন",
+    installHint: "পূর্ণ স্ক্রিন অভিজ্ঞতার জন্য হোম স্ক্রিনে এই অ্যাপ যোগ করুন।",
+    install: "ইনস্টল",
+    dismiss: "এখন না",
+    aboutTitle: "এআই ইউনিভার্স সম্পর্কে",
+    aboutDesc:
+      "এআই ইউনিভার্স জনপ্রিয় এআই ওয়েবসাইটের একটি স্বাধীন ডিরেক্টরি ও লঞ্চার। কার্ডে ট্যাপ করলে অফিসিয়াল সাইট খুলবে। এটি সব মডেলকে এক চ্যাটে মেশায় না এবং লগইন বা পেইড প্ল্যান এড়ায় না।",
+    version: "ভার্সন",
+    versionNumber: "1.0.0",
+    disclaimer: "স্বাধীন ডিরেক্টরি",
+    disclaimerText:
+      "এআই ইউনিভার্স একটি তৃতীয় পক্ষের ডিরেক্টরি। তালিকাভুক্ত কোনো এআই প্রদানকারীর সাথে এটি সংযুক্ত, অনুমোদিত বা স্পনসরকৃত নয়। প্রতিটি প্রদানকারী নিজের ওয়েবসাইট, অ্যাকাউন্ট, ফিচার, মূল্য এবং শর্তাবলী সম্পূর্ণ নিয়ন্ত্রণ করে।",
+    categories: "সমর্থিত বিভাগ",
+    privacyTitle: "গোপনীয়তা নোটিশ",
+    privacyP1:
+      "এআই ইউনিভার্স অফিসিয়াল তৃতীয় পক্ষের এআই ওয়েবসাইট খোলে। সেই সাইট ব্যবহার করলে প্রদানকারী আপনার লেখা, আপলোড বা জমা দেওয়া তথ্য পেতে পারে — প্রম্পট, ফাইল এবং অ্যাকাউন্টের বিবরণসহ।",
+    privacyP2:
+      "এই অ্যাপ আপনার এআই পাসওয়ার্ড, কথোপকথন বা অথেন্টিকেশন টোকেন সংগ্রহ, সংরক্ষণ বা পাঠায় না। এটি তৃতীয় পক্ষের পাতায় স্ক্রিপ্ট ঢোকায় না এবং কোনো অ্যানালিটিক্স বা বিজ্ঞাপন SDK ব্যবহার করে না।",
+    privacyP3:
+      "পছন্দ, ভাষা এবং থিম শুধু এই ডিভাইসে সংরক্ষিত হয়। ব্যবহারের আগে প্রতিটি এআই প্রদানকারীর নিজস্ব গোপনীয়তা নীতি পড়ুন।",
+    privacyP4:
+      "তৃতীয় পক্ষের ওয়েবসাইটে জমা দেওয়া তথ্য ব্যক্তিগত থাকবে বলে ধরে নেবেন না। সেই সেবার নিজস্ব নীতি ও অ্যাকাউন্ট আছে।",
+    madeIndependent: "স্বাধীন · বিজ্ঞাপন নেই · অ্যাকাউন্ট লাগবে না",
+    requiresInternet: "এআই ওয়েবসাইটের জন্য ইন্টারনেট প্রয়োজন",
+    savedLocally: "পছন্দ এই ডিভাইসে সংরক্ষিত",
+    toolsCount: "{n}টি টুল",
+    featured: "ফিচার্ড",
+    continueTo: "{name}-এ চলুন",
+    ownedByProvider:
+      "লগইন, সাবস্ক্রিপশন এবং ফিচার অফিসিয়াল ওয়েবসাইটে পরিচালিত হয়।",
+    errorLoad: "এই পাতা লোড হয়নি",
+    errorLoadHint: "সংযোগ দেখুন, তারপর আবার চেষ্টা করুন অথবা ব্রাউজারে খুলুন।",
+    appearance: "চেহারা",
+    preferences: "পছন্দসমূহ",
+    legal: "আইনি",
+    howToInstall: "অ্যান্ড্রয়েডে ইনস্টল",
+    howToInstallSteps:
+      "ক্রোমে মেনু (⋮) ট্যাপ করে Install app অথবা Add to Home screen বেছে নিন। এআই ইউনিভার্স সাধারণ অ্যাপের মতো দেখাবে।",
+    notEndorsed: "তালিকাভুক্ত প্রদানকারীদের সাথে সম্পর্কিত নয়",
+    openHttpsOnly: "শুধু অফিসিয়াল HTTPS লিংক খোলা হয়।",
+    favoriteSaved: "পছন্দে সংরক্ষিত",
+    emptySearchAction: "অনুসন্ধান মুছুন",
+    popularHint: "সবচেয়ে ব্যবহৃত সহায়ক",
+    resultsFor: "ফলাফল",
+    toolCountLabel: "৩০টি এআই টুল",
+    launchTitle: "{name} খুলুন",
+    officialSite: "অফিসিয়াল ওয়েবসাইট",
+    categoryLabel: "বিভাগ",
+    keepWaiting: "অপেক্ষা করুন",
+    defaultBrowser: "ডিফল্ট ব্রাউজার",
+  },
+} as const;
+
+export type TranslationKey = keyof typeof translations.en;
+
+export function t(
+  lang: Language,
+  key: TranslationKey,
+  vars?: Record<string, string | number>
+): string {
+  let value: string = translations[lang][key] ?? translations.en[key];
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      value = value.replace(`{${k}}`, String(v));
+    }
+  }
+  return value;
+}
+
+export function categoryLabel(lang: Language, id: CategoryId): string {
+  return t(lang, id);
+}
